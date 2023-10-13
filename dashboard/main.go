@@ -24,12 +24,12 @@ func main() {
 	r := gin.Default()
 
 	// Allowing Cross Origin Requests
-	r.Use(cors.New(cors.Config{
-		AllowOrigins:     []string{"http://localhost:3000", "http://localhost:8080", "http://localhost:5173"},
-		AllowMethods:     []string{"PUT", "PATCH", "POST", "GET", "DELETE", "OPTIONS"},
-		AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
-		AllowCredentials: true,
-	}))
+    r.Use(cors.New(cors.Config{
+        AllowOrigins:     []string{"http://localhost:3000", "http://localhost:8080", "http://localhost:5173"},
+        AllowMethods:     []string{"PUT", "PATCH", "POST", "GET", "DELETE", "OPTIONS"},
+	AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
+	AllowCredentials: true,
+    }))
 
 	// Auth URLs
 	r.POST("/signup", controllers.Singup)
