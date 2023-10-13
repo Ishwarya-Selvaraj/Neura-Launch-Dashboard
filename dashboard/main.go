@@ -19,7 +19,6 @@ func init() {
 
 func main() {
 
-
     // Initializig the gin router/engine
     r := gin.Default()
 
