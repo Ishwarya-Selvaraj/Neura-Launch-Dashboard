@@ -30,7 +30,7 @@ func main() {
 	AllowHeaders:     []string{"Origin", "Content-Type", "Authorization"},
 	AllowCredentials: true,
     }))
-
+	
 	// Auth URLs
 	r.POST("/signup", controllers.Singup)
 	r.POST("/login", controllers.Login)
